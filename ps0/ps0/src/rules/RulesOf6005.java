@@ -36,7 +36,7 @@ public class RulesOf6005 {
             boolean availableToOthers, boolean writtenAsCourseWork,
             boolean citingYourSource, boolean implementationRequired) {
 
-        return writtenByYourself || availableToOthers || writtenAsCourseWork ||
+        return writtenByYourself ||  writtenAsCourseWork ||
                 citingYourSource || implementationRequired;
     }
     
@@ -49,6 +49,8 @@ public class RulesOf6005 {
      */
     public static void main(String[] args) {
         System.out.println("You may certainly use code you wrote yourself: " +
-            RulesOf6005.mayUseCodeInAssignment(true, false, true, true, true));
+            RulesOf6005.mayUseCodeInAssignment(
+                    true, false, true,
+                    true, true));
     }
 }
